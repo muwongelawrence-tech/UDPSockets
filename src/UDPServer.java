@@ -1,7 +1,7 @@
 import java.net.*;
 import java.io.*;
 public class UDPServer {
-    public static void main(String args[]){
+    public void server(){
         DatagramSocket aSocket = null;
         try{
             aSocket = new DatagramSocket(6789);
@@ -17,5 +17,6 @@ public class UDPServer {
         }catch (IOException e) {System.out.println("IO: " + e.getMessage());}
         finally {if(aSocket != null) aSocket.close();}
     }
-}
 
+
+}
